@@ -176,7 +176,7 @@ def get_groups_above_cutoff(cutoff, cache_file):
 
         groups[group_id] = groups.get(group_id, 0) + 1
 
-    return {group_id: count for group_id, count in groups.items() if count >= cutoff}Sonnet 4.6
+    return {group_id: count for group_id, count in groups.items() if count >= cutoff}
 
 
 # Extra Credit
