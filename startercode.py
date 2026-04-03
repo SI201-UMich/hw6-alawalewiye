@@ -133,6 +133,8 @@ def get_longest_lifespan_breed(cache_file):
         try:
             name = breed_data['data']['attributes']['name']
             lifespan = breed_data['data']['attributes']['life']['max']
+            if not isinstance(lifespan, (int, float)):
+                continue
         except:
             continue
 
@@ -231,7 +233,7 @@ def recommend_breeds_in_same_group(breed_name, cache_file):
     if not recommendations:
         return f"No recommendations found based on '{breed_name}'."
 
-    return sorted(recommendations)Sonnet 4.6
+    return sorted(recommendations)
 
 class TestHomeworkDogAPI(unittest.TestCase):
     def setUp(self):
